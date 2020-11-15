@@ -22,16 +22,38 @@ li {
   font-size: 16px;
 }
 
-small {
-  margin-top: 0;
-}
-
 .app-wrapper {
   margin: 30px auto;
   max-width: 600px;
 }
+
 .app {
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #878787;
+}
+
+.overview {
+  margin-bottom: 15px;
+}
+
+.weather-temperature img {
+  margin-right: 10px;
+  float: left;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
+  color: rgb(32, 33, 36);
+  font-size: 64px;
+  font-weight: 400;
+  height: auto;
+  line-height: 1;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
