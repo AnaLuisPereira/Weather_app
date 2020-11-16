@@ -16,13 +16,15 @@ ul {
 
 li {
   list-style: none;
-  text-transform: capitalize;
   margin: 0;
   padding: 0;
   color: #878787;
   font-size: 16px;
 }
 
+li :first-letter {
+  text-transform: capitalize;
+}
 .app-wrapper {
   margin: 30px auto;
   max-width: 600px;
