@@ -22,7 +22,7 @@ li {
   font-size: 16px;
 }
 
-li :first-letter {
+li.first-letter {
   text-transform: capitalize;
 }
 .app-wrapper {
