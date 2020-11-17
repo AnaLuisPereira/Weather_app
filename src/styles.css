@@ -8,6 +8,7 @@ h1 {
   line-height: 28px;
   font-weight: 100;
   margin-bottom: 0;
+  margin-top: 15px;
 }
 ul {
   margin: 0;
@@ -16,15 +17,13 @@ ul {
 
 li {
   list-style: none;
+  text-transform: capitalize;
   margin: 0;
   padding: 0;
   color: #878787;
   font-size: 16px;
 }
 
-li.first-letter {
-  text-transform: capitalize;
-}
 .app-wrapper {
   margin: 30px auto;
   max-width: 600px;

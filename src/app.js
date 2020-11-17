@@ -32,7 +32,7 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 
 
 let apiKey = "830aed891211b6be1ef87627b8211da0";
-let city = "Lisbon"
+let city = "Porto"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
 
 axios.get(apiUrl).then(displayTemperature); 
