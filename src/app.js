@@ -20,6 +20,7 @@ let windElement = document.querySelector("#wind");
 let dateElement = document.querySelector("#date"); 
 let iconElement = document.querySelector("#icon");
 
+celsiusTemperature = response.data.main.temp;
 temperatureElement.innerHTML = Math.round(response.data.main.temp);
 cityElement.innerHTML = response.data.name; 
 descriptionElement.innerHTML = response.data.weather[0].description;
@@ -40,8 +41,31 @@ function handleSubmit(event){
     event.preventDefault(); 
     let cityInputElement = document.querySelector("#city-input"); 
     search(cityInputElement.value); 
-    console.log(cityInputElement.value); 
+   
 }
+
+function displayFahrenheitTemperature(event){
+    event.preventDefault(); 
+    let temperatureElement = document.querySelector("#temperature");
+    let fahrenheitTemperature = (celsiusTemperature*9/5) + 32;    
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature); 
+}
+
+let celsiusTemperature = null; 
 
 let form = document.querySelector("#search-form"); 
 form.addEventListener("submit", handleSubmit); 
+
+let fahrenheitLink = document.querySelector("#Fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature); 
+
+let celsiusLink = document.querySelector("#Celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature); 
+
+search("Porto")
