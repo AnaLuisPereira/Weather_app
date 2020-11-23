@@ -30,9 +30,18 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 iconElement.setAttribute("alt", response.data.weather[0].description); 
 }; 
 
-
+function search (city){
 let apiKey = "830aed891211b6be1ef87627b8211da0";
-let city = "Porto"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
-
 axios.get(apiUrl).then(displayTemperature); 
+}
+
+function handleSubmit(event){
+    event.preventDefault(); 
+    let cityInputElement = document.querySelector("#city-input"); 
+    search(cityInputElement.value); 
+    console.log(cityInputElement.value); 
+}
+
+let form = document.querySelector("#search-form"); 
+form.addEventListener("submit", handleSubmit); 
